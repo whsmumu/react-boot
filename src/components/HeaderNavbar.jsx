@@ -17,7 +17,7 @@ export default function HeaderNavbar() {
 
   return (
     <header>
-      <Navbar bg="primary" data-bs-theme="dark" expand="lg" className="py-3">
+      <Navbar bg="primary" data-bs-theme="dark" expand={false} className="py-3">
         <Container>
           <Navbar.Brand href="#" className="fw-bold">SINDADOS-BA</Navbar.Brand>
           <Navbar.Toggle aria-controls="menu-principal" />
@@ -28,12 +28,12 @@ export default function HeaderNavbar() {
             </Nav>
 
             {isLoggedIn ? (
-              <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+              <div className="d-flex align-items-center gap-3 mt-3">
                 <span className="text-white">Olá, {userProfile.nome}</span>
                 <Button variant="outline-light" onClick={sair}>Sair</Button>
               </div>
             ) : (
-              <div className="d-flex gap-2 mt-3 mt-lg-0">
+              <div className="d-flex gap-2 mt-3">
                 <Button variant="outline-light" onClick={() => entrar('Sócio Filiado')}>Login</Button>
                 <Button variant="success" onClick={() => entrar('Novo Sócio')}>Seja Sócio</Button>
               </div>
