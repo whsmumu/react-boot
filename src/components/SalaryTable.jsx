@@ -58,7 +58,6 @@ export default function SalaryTable({ cargos }) {
         </tbody>
       </Table>
 
-      {/* selecionado continua preenchido durante a animação de fechar */}
       <Modal show={mostrarModal} onHide={() => setMostrarModal(false)} centered>
         <Modal.Header closeButton closeVariant="white" className="bg-primary text-white">
           <Modal.Title>{selecionado?.cargo}</Modal.Title>
