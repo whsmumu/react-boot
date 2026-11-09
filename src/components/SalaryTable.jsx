@@ -28,12 +28,12 @@ export default function SalaryTable({ cargos }) {
       </Form.Group>
 
       <Table bordered hover responsive striped className="align-middle">
-        <thead className="table-dark">
+        <thead>
           <tr>
-            <th>Cargo</th>
-            <th>Piso 2026</th>
-            <th>Reajuste</th>
-            <th>Ações</th>
+            <th className="bg-primary text-white">Cargo</th>
+            <th className="bg-primary text-white text-end">Piso 2026</th>
+            <th className="bg-primary text-white text-end">Reajuste</th>
+            <th className="bg-primary text-white">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -45,8 +45,8 @@ export default function SalaryTable({ cargos }) {
             filtrados.map((c) => (
               <tr key={c.id}>
                 <td>{c.cargo}</td>
-                <td>{moeda(c.piso)}</td>
-                <td>{c.reajuste.toLocaleString('pt-BR')}%</td>
+                <td className="font-monospace text-end text-nowrap">{moeda(c.piso)}</td>
+                <td className="font-monospace text-end">{c.reajuste.toLocaleString('pt-BR', { minimumFractionDigits: 1 })}%</td>
                 <td>
                   <Button size="sm" variant="primary" className="text-nowrap" onClick={() => abrir(c)}>
                     Ver Detalhes/Carga Horária

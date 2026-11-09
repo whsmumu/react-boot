@@ -7,21 +7,21 @@ const noticias = [
     id: 1,
     titulo: 'Campanha Salarial 2026/2027',
     descricao: 'Assembleia geral define a pauta de reajuste da categoria de TI.',
-    imagem: '/img/slide1.svg',
+    imagem: '/img/campanha-salarial.webp',
     link: '#pisos',
   },
   {
     id: 2,
     titulo: 'Novos Conveniados de TI',
     descricao: 'Cursos, certificações e coworkings com desconto para sócios.',
-    imagem: '/img/slide2.svg',
+    imagem: '/img/conveniados.jpg',
     link: '#noticias',
   },
   {
     id: 3,
     titulo: 'Clube de Benefícios',
     descricao: 'Saúde, lazer e educação para profissionais de TI da Bahia.',
-    imagem: '/img/slide3.svg',
+    imagem: '/img/beneficios.webp',
     link: '#noticias',
   },
 ];
@@ -41,8 +41,9 @@ export default function App() {
     <>
       <HeaderNavbar />
 
-      <main>
-        <section id="noticias" className="bg-dark py-4">
+      {/* tema escuro do Bootstrap ajusta tabela e busca ao fundo bg-dark */}
+      <main className="bg-dark text-white" data-bs-theme="dark">
+        <section id="noticias" className="py-4">
           <div className="container">
             <NewsCarousel noticias={noticias} />
           </div>

@@ -6,7 +6,7 @@ export default function NewsCarousel({ noticias }) {
       {noticias.map((noticia) => (
         <Carousel.Item key={noticia.id}>
           <img className="d-block w-100 object-fit-cover" style={{ height: 380 }} src={noticia.imagem} alt="" />
-          <Carousel.Caption className="pb-5">
+          <Carousel.Caption className="bg-dark bg-opacity-75 text-white rounded p-3 mb-4">
             <h3 className="fw-bold">{noticia.titulo}</h3>
             <p className="d-none d-sm-block">{noticia.descricao}</p>
             <Button variant="light" href={noticia.link}>Saiba mais</Button>
