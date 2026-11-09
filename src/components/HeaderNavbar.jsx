@@ -19,7 +19,15 @@ export default function HeaderNavbar() {
     <header>
       <Navbar bg="primary" data-bs-theme="dark" expand={false} className="py-3">
         <Container>
-          <Navbar.Brand href="#" className="fw-bold">SINDADOS-BA</Navbar.Brand>
+          <Navbar.Brand href="#" className="fw-bold d-flex align-items-center gap-2">
+            <img
+              src="/img/bandeira-bahia.png"
+              alt="Bandeira da Bahia"
+              height="28"
+              className="rounded-1 border border-light"
+            />
+            SINDADOS-BA
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="menu-principal" />
           <Navbar.Collapse id="menu-principal">
             <Nav className="me-auto">
